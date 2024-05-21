@@ -1,0 +1,72 @@
+.login-layout {
+  &__inner {
+    width: 100%;
+    height: 100dvh;
+    display: flex;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 100px;
+    width: 50%;
+  }
+
+  &__content-inner {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  &__decor {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    background: var(--decor-color);
+    overflow: hidden;
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: -40vh;
+      left: -40vh;
+      width: 100vh;
+      height: 100vh;
+      border: 20vh solid rgba(#fff, .01);
+      border-radius: 100vh;
+    }
+  }
+
+  &__decor-content {
+    position: relative;
+    padding: 0 100px;
+    z-index: 1;
+  }
+
+  &__decor-title {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+  }
+
+  &__decor-description {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.7;
+    color: #fff;
+    margin-top: 15px;
+  }
+
+  &__decor-link {
+    color: #fff;
+    border-bottom: 1px solid rgba(#fff, .3);
+    padding-bottom: 1px;
+    transition: .4s;
+
+    &:hover {
+      border-bottom-color: rgba(#fff, .6);
+    }
+  }
+}

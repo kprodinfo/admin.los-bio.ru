@@ -1,0 +1,8 @@
+.idea
+.nuxt
+node_modules
+.nuxt/
+.output/
+.env
+_nuxt
+dist

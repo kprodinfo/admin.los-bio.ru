@@ -1,0 +1,159 @@
+.ui-input {
+  $root: &;
+  display: flex;
+  align-items: center;
+  position: relative;
+  border: 1px solid var(--input-border-color);
+  border-radius: var(--input-border-radius);
+  background: var(--input-bg-color);
+  transition: var(--transition-fast);
+
+  &_focused {
+    border-color: var(--focused-input-border-color);
+  }
+
+  &__field {
+    border: 0;
+    background: none;
+    appearance: none;
+    width: 100%;
+    color: var(--input-text-color);
+
+    &[type="file"] {
+      display: none;
+    }
+  }
+
+  &_size-extra-small {
+    #{$root} {
+      &__field {
+        padding: 8px 10px;
+        font-size: calc(var(--base-font-size) - 3px);
+      }
+    }
+  }
+
+  &_size-small {
+    #{$root} {
+      &__field {
+        padding: 10px 12px;
+        font-size: calc(var(--base-font-size) - 2px);
+      }
+    }
+  }
+
+  &_size-default {
+    #{$root} {
+      &__field {
+        padding: 12px 15px;
+        font-size: var(--base-font-size);
+      }
+    }
+  }
+
+  &_size-medium {
+    #{$root} {
+      &__field {
+        padding: 15px 20px;
+        font-size: calc(var(--base-font-size) + 2px);
+      }
+    }
+  }
+
+  &_size-extra {
+    #{$root} {
+      &__field {
+        padding: 18px 24px;
+        font-size: calc(var(--base-font-size) + 3px);
+      }
+    }
+  }
+
+  &__files {
+    width: 100%;
+    padding: 20px;
+  }
+
+  &__file-start {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  &__file-icon {
+    width: 64px;
+    height: 64px;
+    fill: var(--primary-color);
+  }
+
+  &__file-title {
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 10px;
+  }
+
+  &__file-allow {
+    color: var(--black-50);
+    font-size: 12px;
+    margin-top: 5px;
+  }
+
+  &__files-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  &__file {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% / 5 - 15px);
+
+    &_text {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: row;
+      width: 100%;
+      padding: 5px;
+
+      &:hover {
+        background: var(--black-2);
+      }
+    }
+  }
+
+  &__file-add {
+    width: 100%;
+    text-align: center;
+    color: var(--primary-color);
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__file-preview-box {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+  }
+
+  &__file-preview {
+    width: 100%;
+    object-fit: cover;
+    border-radius: var(--border-radius-m);
+  }
+
+  &__file-delete-btn {
+    width: 100%;
+    margin-top: 15px;
+
+    &_text {
+      width: max-content;
+      margin-top: 0;
+    }
+  }
+}

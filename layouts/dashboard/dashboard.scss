@@ -1,0 +1,45 @@
+.dashboard-layout {
+  display: flex;
+  height: 100dvh;
+
+  &__aside {
+    max-width: 320px;
+    flex: none;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    background: #f1f5f9;
+    flex-grow: 1;
+    max-height: 100dvh;
+  }
+
+  &__title {
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 25px;
+    font-size: 24px;
+    background: var(--base-bg);
+    color: #fff;
+    z-index: 100;
+  }
+
+  &__site-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+  }
+
+  &__site-icon {
+    width: 24px;
+    height: 24px;
+    stroke-width: 2;
+    stroke: #fff;
+  }
+}

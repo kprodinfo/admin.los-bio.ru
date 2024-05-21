@@ -1,0 +1,26 @@
+.ui-form-group {
+  &__label {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 7px;
+
+    &_with-description {
+      display: inline-flex;
+      flex-direction: column;
+    }
+  }
+
+  &__label-description {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--black-50);
+  }
+
+  &__error {
+    color: var(--error-color);
+    margin-top: 5px;
+    font-size: 14px;
+    font-weight: 300;
+  }
+}

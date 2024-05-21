@@ -1,0 +1,43 @@
+.ui-checkbox {
+  $root: &;
+  display: flex;
+  align-items: center;
+  position: relative;
+  transition: var(--transition-fast);
+
+  &__field {
+    display: none;
+
+    &:checked {
+      + #{$root} {
+        &__fake {
+          background: var(--primary-color);
+          border-color: var(--primary-color);
+        }
+      }
+    }
+
+  }
+
+  &__fake {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    border-radius: var(--input-border-radius);
+    border: 1px solid var(--input-border-color);
+    background: var(--input-bg-color);
+  }
+
+  &__label {
+    margin-left: 10px;
+  }
+
+  &__icon {
+    width: 14px;
+    height: 14px;
+    fill: #fff;
+    transition: .4s;
+  }
+}

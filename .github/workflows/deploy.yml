@@ -1,0 +1,26 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Executing remote command
+        uses: appleboy/ssh-action@master
+        with:
+          HOST: ${{ secrets.HOST }}
+          USERNAME: ${{ secrets.USER }}
+          PASSWORD: ${{ secrets.PASSWORD }}
+          script: |
+            cd LOS/front
+            pm2 stop admin.los-bio.ru
+            pm2 delete admin.los-bio.ru
+            git pull
+            npm i
+            npm run build
+            pm2 start npm --name "admin.los-bio.ru" -- start

@@ -1,0 +1,15 @@
+.ui-info {
+  padding: 15px;
+  border: 1px solid;
+  border-radius: var(--border-radius-m);
+  
+  &.info {
+    background: var(--ui-info-default-bg);
+    color: var(--ui-info-default-color);
+  }
+  
+  &.error {
+    background: var(--ui-info-error-bg);
+    color: var(--ui-info-error-color);
+  }
+}

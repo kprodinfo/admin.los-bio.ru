@@ -1,0 +1,84 @@
+.ui-input {
+
+  &.editor {
+    padding: 10px 0;
+  }
+
+  .codex-editor__redactor {
+    padding-bottom: 0 !important;
+  }
+
+  .product-property {
+    display: flex;
+    align-items: center;
+    padding: 5px 0;
+
+    &:after {
+      content: '';
+      padding-top: 10px;
+      display: flex;
+      flex-grow: 1;
+      width: 100%;
+      order: 1;
+      margin: 0 5px;
+      border-bottom: 1px dashed var(--black-15);
+    }
+
+    &__name {
+      flex: none;
+      padding: 0 5px;
+      font-weight: bold;
+
+      &:empty {
+        &:before {
+          content: attr(data-placeholder);
+          color: var(--black-15);
+        }
+      }
+    }
+
+    &__value {
+      flex: none;
+      text-align: right;
+      order: 2;
+      padding: 0 5px;
+
+      &:empty {
+        &:before {
+          content: attr(data-placeholder);
+          color: var(--black-15);
+        }
+      }
+    }
+  }
+
+  #short_description .codex-editor {
+    z-index: 4;
+  }
+
+  #full_description .codex-editor {
+    z-index: 3;
+  }
+
+  #characteristics .codex-editor {
+    z-index: 2;
+  }
+  
+  .editor-youtube {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+
+    &__link {
+      padding: 15px;
+      border: 1px solid var(--black-50);
+      border-radius: var(--border-radius-s);
+    }
+
+    &__iframe {
+      height: 400px;
+      margin-top: 5px;
+      border-radius: var(--border-radius-s);
+    }
+  }
+}

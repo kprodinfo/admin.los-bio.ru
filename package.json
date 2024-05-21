@@ -1,0 +1,42 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "start": "nuxt start",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@editorjs/editorjs": "^2.29.1",
+    "@editorjs/header": "^2.8.1",
+    "@editorjs/image": "^2.9.0",
+    "@editorjs/list": "^1.9.0",
+    "@editorjs/paragraph": "^2.11.4",
+    "@editorjs/table": "^2.3.0",
+    "@pinia/nuxt": "^0.5.1",
+    "@vueuse/core": "^10.9.0",
+    "axios": "^1.6.8",
+    "nuxt": "^3.10.2",
+    "pinia": "^2.1.7",
+    "sass": "^1.71.0",
+    "sortablejs": "^1.15.2",
+    "vue": "^3.4.19",
+    "vue-router": "^4.2.5",
+    "vue3-perfect-scrollbar": "^2.0.0",
+    "yup": "^1.4.0"
+  },
+  "devDependencies": {
+    "nuxt-svgo": "^4.0.0",
+    "vite-plugin-pug": "^0.3.2"
+  },
+  "overrides": {
+    "vite": "npm:vite@latest"
+  },
+  "resolutions": {
+    "vite": "npm:vite@latest"
+  }
+}

@@ -1,0 +1,83 @@
+.app-contacts {
+  $root: &;
+  display: flex;
+  flex-grow: 1;
+
+  &__tabs {
+    width: 100%;
+    max-width: 400px;
+    min-height: 100%;
+    background: #fff;
+  }
+
+  &__tabs-inner {
+    position: sticky;
+    top: 66px;
+  }
+
+  &__tab {
+    padding: 20px;
+    border: 1px solid var(--black-5);
+    transition: var(--transition-fast);
+
+    &:not(:first-child) {
+      border-top: none;
+    }
+
+    &:hover {
+      cursor: pointer;
+      background: lighten(#e1e9f0, 5%);
+    }
+
+    &.active {
+      position: sticky;
+      top: 0;
+      z-index: 1;
+      background: #e1e9f0;
+
+      #{$root} {
+        &__tab-title {
+          color: var(--primary-color);
+        }
+      }
+    }
+  }
+
+  &__tab-title {
+    font-weight: bold;
+    font-size: 18px;
+    transition: var(--transition-fast);
+  }
+
+  &__tab-description {
+    font-size: 16px;
+    color: var(--black-90);
+  }
+
+  &__content {
+    padding: 25px;
+    min-height: 100%;
+    background: #f1f5f9;
+    flex-grow: 1;
+    max-width: 600px;
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  &__form {
+  }
+
+  &__field {
+
+    &_row {
+      display: flex;
+      align-items: center;
+    }
+    &:not(:first-child) {
+      margin-top: 30px;
+    }
+  }
+}

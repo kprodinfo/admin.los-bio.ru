@@ -1,0 +1,28 @@
+.sign-in {
+  &__form {
+    margin-top: 30px;
+  }
+
+  &__field {
+    width: 100%;
+    
+    &:not(:first-child) {
+      margin-top: 15px;
+    }
+  }
+
+  &__enter-btn {
+    width: 100%;
+    margin-top: 15px;
+  }
+
+  &__error {
+    font-weight: 300;
+    margin-top: 15px;
+    padding: 10px 5px;
+    border: 1px solid var(--error-color);
+    border-radius: var(--border-radius-s);
+    text-align: center;
+    color: var(--error-color);
+  }
+}

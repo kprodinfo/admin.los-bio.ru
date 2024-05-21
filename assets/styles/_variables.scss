@@ -1,0 +1,68 @@
+:root {
+  /* Typographic */
+  --base-font: "Gilroy", sans-serif;
+  --base-font-size: 16px;
+  --base-bg: linear-gradient(135deg, #00011A, #00011A, #0F0F0F);
+  --dark-bg: linear-gradient(135deg, #0F0F0F, #00011A, #00011A);
+
+  /* Overlay */
+  --overlay-bg: rgba(0, 0, 0, .55);
+  --overlay-filter: blur(3px);
+
+  /* White colors */
+  --white-100: #fff;
+  --white-80: rgba(255, 255, 255, 0.80);
+  --white-50: rgba(255, 255, 255, 0.50);
+  --white-13: rgba(255, 255, 255, 0.13);
+  --white-5: rgba(255, 255, 255, 0.05);
+  --white-2: rgba(255, 255, 255, 0.02);
+
+  /* Black colors */
+  --black-100: rgba(18, 21, 35, 1);
+  --black-90: rgba(18, 21, 35, .9);
+  --black-50: rgba(18, 21, 35, .5);
+  --black-15: rgba(18, 21, 35, .15);
+  --black-5: rgba(18, 21, 35, .05);
+  --black-2: rgba(18, 21, 35, .02);
+
+  /* Transitions */
+  --transition-fast: .4s;
+  --transition-medium: .6s;
+  --transition-slow: .8s;
+
+  /* Border radius */
+  --border-radius-s: 4px;
+  --border-radius-m: 8px;
+  --border-radius-l: 12px;
+  --border-radius-xl: 20px;
+  
+  /* UI colors */
+  --success-color: #67C23A;
+  --warning-color: #E6A23C;
+  --error-color: #F56C6C;
+  --error-color-hover: #dc5252;
+  --info-color: #6c93f5;
+
+  /* Brand colors */
+  --primary-color: #1078D7;
+  --primary-dark-color: #0e70c8;
+  --decor-color: #1e293b;
+
+  /* Input */
+  --input-border-color: #cbd5e1;
+  --input-bg-color: #fff;
+  --input-border-radius: 4px;
+  --input-text-color: #222;
+
+  /* Focused input */
+  --focused-input-border-color: var(--primary-color);
+  
+  /* Aside colors */
+  --aside-bg-color: linear-gradient(135deg, #00011A, #00011A, #0F0F0F);
+  
+  /* UI Info */
+  --ui-info-default-bg: #fff;
+  --ui-info-default-color: #1078D7;
+  --ui-info-error-bg: #fff;
+  --ui-info-error-color: #F56C6C;
+}

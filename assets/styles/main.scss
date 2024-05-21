@@ -1,0 +1,110 @@
+@import "fonts";
+
+* {
+  outline: none;
+  box-shadow: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+::selection {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+::-moz-selection {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+body {
+  font-family: var(--base-font);
+  line-height: 1.5;
+  font-size: var(--base-font-size);
+  min-width: 1300px;
+
+/*  
+  background: linear-gradient(180deg, #070b1c, #070d1b);
+
+&:after {
+    content: "";
+    background-size: 50vw 50vw, 50vw 50vw, 50vw 50vw;
+    height: 100vh;
+    left: 0;
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: radial-gradient(rgba(#523ad6, .15), transparent 70%) no-repeat right -40dvw top -25dvh,
+    radial-gradient(rgba(#03aef3, .15), transparent 70%) no-repeat right 40dvw top -20dvw,
+    radial-gradient(rgba(#e900d7, .1) 1%, transparent 70%) no-repeat bottom -50dvh left -15dvw;
+    @media(max-width: 767px) {
+      background: radial-gradient(rgba(#523ad6, .1), transparent 70%) no-repeat right -40dvw top -25dvh,
+      radial-gradient(rgba(#03aef3, .1), transparent 70%) no-repeat right 40dvw top -20dvw,
+      radial-gradient(rgba(#e900d7, .05) 1%, transparent 70%) no-repeat bottom -50dvh left 0;
+    }
+  }*/
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+button {
+  font-family: var(--base-font);
+  font-size: var(--base-font-size);
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+input, textarea, select {
+  font-family: var(--base-font);
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+
+  &[type='number'] {
+    -moz-appearance: textfield;
+  }
+}
+
+.slider-pagination {
+  display: flex;
+  align-items: center;
+
+  &__item {
+    width: 16px;
+    height: 16px;
+    background: var(--primary-color);
+    border-radius: 30px;
+    transition: .4s;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:not(:first-child) {
+      margin-left: 15px;
+    }
+
+    &.active {
+      background: var(--primary-color);
+      outline: 8px solid var(--primary-color);
+    }
+  }
+}
+
+.codex-editor--toolbox-opened {
+  z-index: 2;
+}
+

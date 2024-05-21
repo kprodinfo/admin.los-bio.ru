@@ -1,0 +1,20 @@
+.certificates {
+
+  &__form {
+
+  }
+
+  &__files {
+    display: flex;
+  }
+
+  &__file {
+    width: 25%;
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+  }
+}

@@ -1,0 +1,113 @@
+.ui-button {
+  $root: &;
+  transition: var(--transition-fast);
+
+  &_color-red {
+    &#{$root} {
+      &_variant-fill {
+        background: var(--error-color);
+        color: #fff;
+        border: 2px solid var(--error-color);
+
+        &:hover {
+          border-color: var(--error-color-hover);
+          background: var(--error-color-hover);
+        }
+
+        &[disabled] {
+          border-color: var(--white-13);
+          color: var(--white-13);
+          background: var(--white-13);
+
+          &:hover {
+            cursor: not-allowed;
+          }
+        }
+      }
+    }
+  }
+
+  &_color-gray {
+    &#{$root} {
+      &_variant-bordered {
+        background: transparent;
+        color: #fff;
+        border: 2px solid var(--white-13);
+
+        &:hover {
+          border-color: var(--primary-dark-color);
+        }
+
+        &[disabled] {
+          border-color: var(--white-13);
+          color: var(--white-13);
+
+          &:hover {
+            cursor: not-allowed;
+          }
+        }
+      }
+    }
+  }
+
+  &_color-primary {
+    &#{$root} {
+      &_variant-fill {
+        background: var(--primary-color);
+        color: #fff;
+        border: 2px solid var(--primary-color);
+
+        &:hover {
+          background: var(--primary-dark-color);
+        }
+
+        &[disabled] {
+          border-color: var(--white-13);
+          color: var(--white-13);
+          background: var(--white-13);
+
+          &:hover {
+            cursor: not-allowed;
+          }
+        }
+      }
+
+      &_variant-bordered {
+        background: transparent;
+        color: #fff;
+        border: 2px solid var(--primary-color);
+
+        &:hover {
+          border-color: var(--primary-dark-color);
+        }
+
+        &[disabled] {
+          border-color: var(--white-13);
+          color: var(--white-13);
+
+          &:hover {
+            cursor: not-allowed;
+          }
+        }
+      }
+    }
+  }
+
+  &_size-small {
+    border-radius: var(--border-radius-s);
+    font-size: 14px;
+    padding: 8px 20px;
+  }
+
+  &_size-default {
+    border-radius: var(--border-radius-m);
+    font-size: 16px;
+    padding: 12px 30px;
+  }
+
+  &_size-big {
+    border-radius: var(--border-radius-l);
+    font-size: 18px;
+    padding: 16px 40px;
+  }
+}
