@@ -136,6 +136,7 @@ function removeFile($file) {
 async function sendProduct() {
   /* Если создаём новый продукт */
   if (slug === "create") {
+    delete product.value["id"];
     const newProduct = await createProduct({...product.value, photos: photos.value.filter(p => !p.isDeleted) });
     return await router.push({
       path: `/catalog/${newProduct.slug}`,
