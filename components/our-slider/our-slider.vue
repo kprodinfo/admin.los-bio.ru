@@ -15,8 +15,8 @@
           ui-form-group(label="Картинка" :id="`image-${slide.id}`").our-slider__field.our-slider__image
             ui-input(v-model="image" type="file" :files="slide.image" accept="image/*" :multiple="false" file-preview-type="photos" @get-files="upload($event, slide)" @delete-file="removeFile")
 
-          ui-form-group(label="В какую категорию ведёт кнопка" id="link").our-slider__field
-            ui-select(v-model="slide.link" option-attribute="name" value-attribute="slug" :options="categories")
+          ui-form-group(label="Куда ведёт кнопка?" id="link").our-slider__field
+            ui-input(v-model="slide.link" placeholder="Вставьте ссылку на страницу")
 
           ui-form-group(label="Позиция в слайдере" id="sort").our-slider__field
             ui-input(v-model="slide.sort" placeholder="Введите целое число")
