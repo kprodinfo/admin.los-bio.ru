@@ -11,6 +11,7 @@ import List from "@editorjs/list";
 import Table from '@editorjs/table';
 import ImageTool from "@editorjs/image";
 import ProductProperty from "~/utils/editorjs/product-property/product-property.js";
+import Products from "~/utils/editorjs/products/products.js";
 import YoutubeTools from "~/utils/editorjs/youtube.js";
 
 export default defineComponent({
@@ -45,6 +46,10 @@ export default defineComponent({
         tools: {
           productProperty: {
             class: ProductProperty,
+            inlineToolbar: true,
+          },
+          Products: {
+            class: Products,
             inlineToolbar: true,
           },
           youtube: {

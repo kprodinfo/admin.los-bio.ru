@@ -18,7 +18,6 @@ export const useAuthStore = defineStore('auth', {
             // useFetch from nuxt 3
             const response = await useAuth(email, password);
 
-            console.log(response);
             if (response.type === "token") {
                 const token = useCookie('token');
                 token.value = response.data.token;

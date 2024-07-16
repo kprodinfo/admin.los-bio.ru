@@ -37,6 +37,19 @@
       }
     }
 
+    &__link {
+      flex: none;
+      padding: 0 5px;
+      width: 100%;
+
+      &:empty {
+        &:before {
+          content: attr(data-placeholder);
+          color: var(--black-15);
+        }
+      }
+    }
+
     &__value {
       flex: none;
       text-align: right;
