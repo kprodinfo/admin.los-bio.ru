@@ -72,7 +72,6 @@ const deleteText = computed(() => {
 });
 
 let project = ref({
-  id: new Date().getTime(),
   title: "",
   description: [],
   short_description: [],
@@ -129,7 +128,7 @@ function removeFile($file) {
 async function sendProject() {
   /* Если создаём новый продукт */
   if (slug === "create") {
-    const newProject = await createProject({...project.value, id: 1, photos: photos.value.filter(p => !p.isDeleted) });
+    const newProject = await createProject({...project.value, photos: photos.value.filter(p => !p.isDeleted) });
     return await router.push({
       path: `/projects/${newProject.slug}`,
       query: {
